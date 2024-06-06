@@ -1,6 +1,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set, push, update, remove, onValue } from "firebase/database";
+import { getDatabase, ref, set, push, update, remove, query, orderByChild, limitToLast, onValue } from "firebase/database";
 
 // Firebase 설정 객체입니다. Firebase 콘솔에서 제공하는 값들로 대체하세요.
 const firebaseConfig = {
@@ -36,10 +36,11 @@ initFirebase();
 // 편지 데이터 가져오는 함수
 export function fetchLetters(callback) {
     const lettersRef = ref(database, 'letters/');
-    onValue(lettersRef, (snapshot) => {
+    const lettersQuery = query(lettersRef, orderByChild('sendAt'), limitToLast(100)); // 최신 100개의 데이터를 가져옵니다.
+    onValue(lettersQuery, (snapshot) => {
         const data = snapshot.val();
         const lettersData = data ? Object.values(data) : [];
-        callback(lettersData);
+        callback(lettersData.reverse()); // 최신순으로 정렬하여 반환
     });
 }
 
