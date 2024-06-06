@@ -13,7 +13,7 @@ const LettersList = () => {
     }, []);
 
     return (
-        <div>
+        <div className="mobile-max-height scrollbar-hide">
             {letters.map((letter, index) => (
                 <div key={index} className="p-4 border-b border-gray-300 bg-white shadow-sm rounded mb-4">
                     <p className="text-gray-800">{letter.content}</p>

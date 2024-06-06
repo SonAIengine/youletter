@@ -20,10 +20,10 @@ const WriteLetter = () => {
 
     return (
         <div className="flex flex-col justify-start lg:justify-center lg:items-center min-h-screen p-4 lg:h-screen">
-            <div className="p-6 w-full max-w-4xl bg-gradient-to-r from-yellow-900 to-yellow-800 text-white rounded-lg shadow-lg mt-4 lg:mt-0 overflow-y-auto">
+            <div className="p-6 w-full max-w-4xl bg-gradient-to-r from-yellow-900 to-yellow-800 text-white rounded-lg shadow-lg mt-4 lg:mt-0">
                 <h1 className="text-3xl font-bold mb-4">편지 작성하기</h1>
                 <textarea
-                    className="w-full h-64 p-3 border rounded bg-yellow-700 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-600 overflow-y-auto"
+                    className="w-full h-64 p-3 border rounded bg-yellow-700 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-600"
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                     placeholder="1년 뒤의 나에게 편지를 작성하세요..."
