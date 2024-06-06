@@ -13,12 +13,12 @@ export const metadata = {
     themeColor: '#000000',
     openGraph: {
         type: 'website',
-        url: 'https://yourwebsite.com',
+        url: 'https://youletter.vercel.app',
         title: '1년 뒤의 나에게 보내는 편지 웹사이트',
         description: '1년 뒤의 나에게 편지를 쓰는 웹사이트입니다. 사용자는 로그인하여 웹 에디터를 통해 편지를 작성하고, 작성된 편지는 1년 뒤에 사용자에게 이메일로 발송됩니다.',
         images: [
             {
-                url: 'https://yourwebsite.com/images/og-image.jpg',
+                url: 'https://youletter.vercel.app/images/og-image.jpg',  // 실제 이미지 경로로 변경 필요
                 width: 800,
                 height: 600,
                 alt: '1년 뒤의 나에게 보내는 편지 웹사이트',
@@ -30,7 +30,7 @@ export const metadata = {
         site: '@yourtwitterhandle',
         title: '1년 뒤의 나에게 보내는 편지 웹사이트',
         description: '1년 뒤의 나에게 편지를 쓰는 웹사이트입니다. 사용자는 로그인하여 웹 에디터를 통해 편지를 작성하고, 작성된 편지는 1년 뒤에 사용자에게 이메일로 발송됩니다.',
-        image: 'https://yourwebsite.com/images/twitter-image.jpg',
+        image: 'https://youletter.vercel.app/images/twitter-image.jpg',  // 실제 이미지 경로로 변경 필요
     },
 };
 
