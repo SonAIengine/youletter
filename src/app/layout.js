@@ -9,8 +9,6 @@ export const metadata = {
     description: '1년 뒤의 나에게 편지를 쓰는 웹사이트입니다. 사용자는 로그인하여 웹 에디터를 통해 편지를 작성하고, 작성된 편지는 1년 뒤에 사용자에게 이메일로 발송됩니다.',
     keywords: '편지, 미래, 예약 발송, 이메일, Firebase, Next.js, 구글 로그인',
     author: 'Your Name',
-    viewport: 'width=device-width, initial-scale=1',
-    themeColor: '#000000',
     openGraph: {
         type: 'website',
         url: 'https://youletter.vercel.app',
@@ -18,7 +16,7 @@ export const metadata = {
         description: '1년 뒤의 나에게 편지를 쓰는 웹사이트입니다. 사용자는 로그인하여 웹 에디터를 통해 편지를 작성하고, 작성된 편지는 1년 뒤에 사용자에게 이메일로 발송됩니다.',
         images: [
             {
-                url: '/mail.jpg',// 실제 이미지 경로로 변경 필요
+                url: '/mail.jpg', // 실제 이미지 경로로 변경 필요
                 width: 800,
                 height: 600,
                 alt: '1년 뒤의 나에게 보내는 편지',
@@ -34,6 +32,13 @@ export const metadata = {
     },
 };
 
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+};
+
+export const themeColor = '#000000';
+
 export default function RootLayout({ children }) {
     return (
         <html lang="ko">
@@ -42,8 +47,6 @@ export default function RootLayout({ children }) {
             <meta name="description" content={metadata.description} />
             <meta name="keywords" content={metadata.keywords} />
             <meta name="author" content={metadata.author} />
-            <meta name="viewport" content={metadata.viewport} />
-            <meta name="theme-color" content={metadata.themeColor} />
             <meta property="og:type" content={metadata.openGraph.type} />
             <meta property="og:url" content={metadata.openGraph.url} />
             <meta property="og:title" content={metadata.openGraph.title} />
@@ -57,6 +60,8 @@ export default function RootLayout({ children }) {
             <meta name="twitter:title" content={metadata.twitter.title} />
             <meta name="twitter:description" content={metadata.twitter.description} />
             <meta name="twitter:image" content={metadata.twitter.image} />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="theme-color" content={themeColor} />
         </head>
         <body className={inter.className}>
         <div className="flex flex-col lg:flex-row min-h-screen">
